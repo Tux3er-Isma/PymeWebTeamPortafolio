@@ -3,6 +3,7 @@
 
 /*Header Styles*/
 .header{
+    height: 600px;
 
     &__nav{
         margin-top: 30px;
@@ -10,8 +11,10 @@
         justify-content: flex-end;
 
         &__btn-container{
+            display: flex;
 
             &__btn{
+                font-weight: bold;
                 border: none;
                 outline: none;
                 transition: all .5s;
@@ -22,6 +25,9 @@
             }
 
             &__btn--1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 margin-right: 10px;
                 width: 120px;
                 height: 40px;
@@ -31,8 +37,17 @@
                 border: 1px solid variables.$light-red;
 
                 &:hover{
-                    color: variables.$black;
-                    background-color: variables.$light-red;
+                    transition: all .5s;
+
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        background-color: #fff;
+                        width: 120px;
+                        height: 40px;
+                        border-radius: 30px;
+                        opacity: .05;
+                    }
                 }
             }
 
@@ -44,10 +59,130 @@
                 margin-right: 20px;
 
                 &:hover{
-                    color: variables.$light-red;
-                    background-color: transparent;
-                    border: 1px solid variables.$light-red;
+                    background-color: variables.$white;
                 }
+            }
+        }
+    }
+
+    &__title-container{
+        display: none;
+    }
+
+    &__letters-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 64px;
+
+        &__title{
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: variables.$white;
+            text-align: center;
+        }
+    
+        &__container{
+            margin-top: 30px;
+            display: grid;
+            justify-items: center;
+    
+            &__items{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                border: .8px solid #777;
+                text-transform: uppercase;
+                font-family: 'Space Mono', monospace;
+                font-weight: bold;
+            }
+    
+            &__item-0{
+                width: 64px;
+                height: 95px;
+                font-size: 50px;
+            }
+        }
+
+        &__arrow-down{
+            width: 40px;
+            position: absolute;
+            top: 550px;
+            animation: arrow-down 2.5s infinite ease-in-out;
+
+            @keyframes arrow-down{
+                0%{
+                   transform: translateY(-20px); 
+                }
+
+                50%{
+                    transform: translateY(0px);
+                }
+
+                100%{
+                    transform: translateY(-20px);
+                }
+            }
+        }
+    }
+
+    &__btn-container{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .header{
+
+        &__nav{
+            display: none;
+        }
+
+        &__title-container{
+            display: block;
+
+            &__title{
+                margin: 10px;
+            }
+        }
+
+        &__letters-container{
+            margin-top: 150px;
+
+            &__title{
+                font-size: 20px;
+            }
+
+            &__container{
+                height: 100px;
+
+                &__item-0{
+                    width: 20px;
+                    height: 33px;
+                    font-size: 20px;
+                }
+            }
+
+            &__arrow-down{
+                display: none;
+            }
+        }
+
+        &__btn-container{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__btn--1{
+                width: 300px;
+                margin-bottom: 10px;
+            }
+
+            &__btn--2{
+                width: 300px;
             }
         }
     }
