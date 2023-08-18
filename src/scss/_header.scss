@@ -1,0 +1,54 @@
+/*SCSS Files*/
+@use 'variables';
+
+/*Header Styles*/
+.header{
+
+    &__nav{
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+
+        &__btn-container{
+
+            &__btn{
+                border: none;
+                outline: none;
+                transition: all .5s;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            &__btn--1{
+                margin-right: 10px;
+                width: 120px;
+                height: 40px;
+                border-radius: 30px;
+                background-color: transparent;
+                color: variables.$light-red;
+                border: 1px solid variables.$light-red;
+
+                &:hover{
+                    color: variables.$black;
+                    background-color: variables.$light-red;
+                }
+            }
+
+            &__btn--2{
+                border-radius: 30px;
+                width: 160px;
+                height: 40px;
+                background-color: variables.$light-red;
+                margin-right: 20px;
+
+                &:hover{
+                    color: variables.$light-red;
+                    background-color: transparent;
+                    border: 1px solid variables.$light-red;
+                }
+            }
+        }
+    }
+}
