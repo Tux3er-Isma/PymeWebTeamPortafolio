@@ -1,0 +1,26 @@
+/*SCSS Files*/
+@use 'variables';
+
+/*Main Styles*/
+.main{
+    margin-top: 100px;
+
+    &__article--one{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: variables.$white;
+
+        &__title{
+            margin-bottom: 20px;
+            width: 400px;
+            font-size: 28px;
+        }
+
+        &__txt{
+            font-size: 18px;
+            width: 400px;
+        }
+    }
+}
