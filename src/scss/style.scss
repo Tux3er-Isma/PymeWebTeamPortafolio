@@ -1,0 +1,73 @@
+/*SCSS Files*/
+@use 'variables';
+@use 'header';
+@use 'main';
+
+/*General Styles*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variables.$poppins;
+    scroll-behavior: smooth;
+}
+
+body{
+    scrollbar-gutter: auto;
+    height: 10000px;
+    background: url(/public/assets/img/bg.png);
+
+    &::-webkit-scrollbar{
+        width: 7px;
+        color: #161616;
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: #161616;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        border-radius: 30px;
+        transition: all .5s;
+        background-color: variables.$light-red;
+    }
+}
+
+::selection{
+    background-color: #C70039;
+    color: #fff;
+}
+
+i{
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 480px){
+    i{
+        font-size: 20px;
+    }
+}
+
+@keyframes appeard-1{
+    0%{
+        display: none;
+        transform: translateX(-50px);
+    }
+
+    100%{
+        display: flex;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes aappeard-1{
+    0%{
+        display: none;
+        transform: translateX(-50px);
+    }
+
+    100%{
+        display: flex;
+        transform: translateX(0px);
+    }
+}
