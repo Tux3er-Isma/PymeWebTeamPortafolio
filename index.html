@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terminal-Portafolio">
     <title>Terminal</title>
     <!-- CSS File -->
     <link rel="stylesheet" href="/public/css/style.css" type="text/css">
@@ -16,8 +17,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <!--DM Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,900&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/a1618bce8f.js" crossorigin="anonymous"></script>
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header class="header">
@@ -31,23 +38,101 @@
             <h1 class="header__title-container__title">TERMINAL</h1>
         </div>
         <div class="header__letters-container">
-            <h2 class="header__letters-container__title">Y si tu página web fuese...</h2>
+            <h2 class="header__letters-container__title">Imagina tener una página web que tuviera...</h2>
             <div class="header__letters-container__container"></div>
-            <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142039485585043566/flecha-hacia-abajo.png" alt="Arrow-down" class="header__letters-container__arrow-down">
+            <a href="#main"><img src="https://cdn.discordapp.com/attachments/973568724722389052/1142039485585043566/flecha-hacia-abajo.png" alt="Arrow-down" class="header__letters-container__arrow-down"></a>
         </div>
         <div class="header__btn-container">
             <button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--1 header__btn-container__btn--1">Explorar</button>
             <button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--2 header__btn-container__btn--2">Contáctanos</button>
         </div>
     </header>
-    <main class="main">
+    <main class="main" id="main">
         <article class="main__article main__article--one">
             <h1 class="main__article__title main__article--one__title">Quiénes somos</h1>
             <p class="main__article__txt main__article--one__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia explicabo vero vel. Minima sapiente est accusamus vel laudantium. Ad doloremque voluptates nesciunt quis molestiae atque libero, quo inventore in.</p>
             <br>
             <p class="main__article__txt main__article--one__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia explicabo vero vel. Minima sapiente est accusamus vel laudantium. Ad doloremque voluptates nesciunt quis molestiae atque libero, quo inventore in.</p>
         </article>
+        <article class="main__article main__article--two">
+            <div class="main__article__info-container main__article--two__info-container">
+                <h1 class="main__article__info-container__title main__article--two__info-container__title">Que Hacemos</h1>
+                <h2 class="main__article__info-container__subtitle main__article--two__info-container__subtitle">Lorem ipsum dolor sit amet.</>
+                <div class="main__article__info-container__skills-container main__article--two__info-container__skills-container">
+                    <h2 class="main__article__info-container__skills-container__title main__article--two__info-container__skills-container__title">NOS ESPECIALIZAMOS EN:</h2>
+                    <ul class="main__article__info-container__skills-container__list-container main__article--two__info-container__skills-container__list-container">
+                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-1"><p class="fa-solid fa-code main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--1"></p> Diseño y desarrollo (Páginas web)</li>
+                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-2"><p class="fa-brands fa-instagram main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--2"></p> Creción y edición de videos para redes sociales</li>
+                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-3"><p class="fa-solid fa-arrows-rotate main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--3"></p> Mantenimiento y actualización continua</li>
+                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-4"><p class="fa-solid fa-pencil main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--4"></p> Copy Writing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main__article__gif-container main__article--two__gif-container">
+                <img src="/public/assets/gifs/gif.gif" alt="GIF" class="main__article__gif-container__gif main__article--two__gif-container__gif">
+            </div>
+        </article>
+        <article class="main__article main__article--three">
+            <div class="main__article__work-container main__article--three__work-container">
+                <div class="main__article--three__work-container__star-container">
+                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__star-container__little-star">
+                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089312595345458/estrella_grande.png" alt="" class="main__article--three__work-container__star-container__big-star">
+                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__star-container__little-star">
+                </div>
+                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--1">
+                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Consulta C/C y Planficación</p>
+                </div>
+                <div class="main__article__work-container__arrow-container main__article--three__work-container__arrow-container arrow-1">
+                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__large-arrow"></div>
+                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__head-arrow"></div>
+                </div>
+                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--2">
+                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Diseño creativo y propuesta</p>
+                </div>
+                <div class="main__article__work-container__arrow-container main__article--three__work-container__arrow-container arrow-2">
+                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__large-arrow"></div>
+                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__head-arrow"></div>
+                </div>
+                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--3">
+                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt main__article--three__work-container__container--3__txt">Desarrollo <br>Técnico</p>
+                </div>
+                <div class="main__article--three__work-container__down-arrow-container arrow-3">
+                    <div class="main__article--three__work-container__down-arrow-container__long-arrow"></div>
+                    <div class="main__article--three__work-container__down-arrow-container__head-arrow"></div>
+                </div>
+                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--4">
+                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Pruebas y ajustes (con el cliente)</p>
+                </div>
+                <div class="main__article--three__work-container__reverse-arrow-container arrow-4">
+                    <div class="main__article--three__work-container__reverse-arrow-container__large-arrow"></div>
+                    <div class="main__article--three__work-container__reverse-arrow-container__head-arrow"></div>
+                </div>
+                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--5">
+                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Lanzamiento y entrega</p>
+                </div>
+                <div class="main__article--three__work-container__reverse-arrow-container arrow-5">
+                    <div class="main__article--three__work-container__reverse-arrow-container__large-arrow"></div>
+                    <div class="main__article--three__work-container__reverse-arrow-container__head-arrow"></div>
+                </div>
+                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--6">
+                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Mantenimiento y Actualizaciones</p>
+                </div>
+                <div class="main__article--three__work-container__reverse-star-container">
+                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089312595345458/estrella_grande.png" alt="" class="main__article--three__work-container__reverse-star-container__big-star">
+                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__reverse-star-container__little-star">
+                </div>
+            </div>
+            <div class="main__article--three__info-container">
+                <div class="main__article--three__info-container__txt-container">
+                    <h1 class="main__article--three__info-container__txt-container__title">Como trabajamos</h1>
+                    <p class="main__article--three__info-container__txt-container__subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                <button type="button" class="main__article--three__info-container__btn">Descargar esquema</button>
+            </div>
+        </article>
     </main>
+    <script src="/src/js/index.js"></script>
     <script src="/src/js/letters.js"></script>
+    <script src="/src/js/workC.js"></script>
 </body>
 </html>
