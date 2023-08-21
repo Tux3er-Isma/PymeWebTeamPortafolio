@@ -1,15 +1,25 @@
+// Función para cambiar el título cuando el usuario se va de la página
+window.addEventListener('blur', function() {
+  document.title = '¡No te vayas!';
+});
+
+// Función para restaurar el título cuando el usuario vuelve a la página
+window.addEventListener('focus', function() {
+  document.title = 'Terminal';
+});
+
+
 const container = document.querySelector('.header__letters-container__container');
 let index = 0;
 let icon;
 let iconKey = "<p>~></p>"
 
 let frasesArr = [
-  "<Personalizable/> y profesional",
-  "<Especializada/> en vender",
-  "</Enfocada en>    vender",
-  ">Constantemente actualizada",
-  "</Intuitivamente> diseñada",
-  ">Ajustada a tu gusto"
+  "<Diseños/> creativos",
+  "<Estrategia/> vendedora",
+  "</Soporte> contínuo",
+  ">Competitivo precio",
+  "</Visibilidad> online",
 ];
 
 let caracteres = ["@", "!", "·", "$", "%", ")", "=", "?"];
@@ -26,17 +36,15 @@ function cambiarFrase() {
     document.head.appendChild(istyles);
   let frase = frasesArr[Math.floor(Math.random() * frasesArr.length)];
   let fraseArr = Array.from(frase);
-  if (frase == ">Ajustada a tu gusto"){
-    icon = '<i class="fa-solid fa-terminal"></i>';
-  } else if (frase == "<Personalizable/> y profesional"){
+   if (frase == "<Diseños/> creativos"){
     icon = '<i class="fa-solid fa-code"></i>';
-  } else if (frase == "<Especializada/> en vender"){
+  } else if (frase == "<Estrategia/> vendedora"){
     icon = '<i class="fa-solid fa-gear"></i>';
-  } else if (frase == "</Enfocada en>    vender"){
+  } else if (frase == "</Soporte> contínuo"){
     icon = '<i class="fa-solid fa-gear"></i>';
-  } else if (frase == ">Constantemente actualizada"){
+  } else if (frase == ">Competitivo precio"){
     icon = '<i class="fa-solid fa-arrow-trend-up"></i>';
-  } else if (frase == "</Intuitivamente> diseñada"){
+  } else if (frase == "</Visibilidad> online"){
     icon = '<i class="fa-solid fa-code-merge"></i>'
   }
   fraseArr.push(icon);
@@ -92,7 +100,7 @@ function cambiarFrase() {
 
     if (wordLengths.length == 5 || wordLengths.length == 4){
         if (wordLengths[0].length < wordLengths[1].length){
-            line1Length = wordLengths[0].length 
+            line1Length = wordLengths[1].length; 
         } else {
             line1Length = wordLengths[0].length;
         }
@@ -109,13 +117,13 @@ function cambiarFrase() {
 
     if (window.screen.availWidth <= 480){
         itemsArr.forEach(item =>{
-            item.style.width = '20px';
-            item.style.height = '33px';
+            item.style.width = '25px';
+            item.style.height = '40px';
             item.style.fontSize = '20px';
         })
         for (let i = 0; i < line1Length; i++){
-            gridColumnValue += '20px' + ' ';
-            gridRowValue += '35px' + ' ';
+            gridColumnValue += '25px' + ' ';
+            gridRowValue += '40px' + ' ';
         }
     } else {
         itemsArr.forEach(item =>{
@@ -135,4 +143,4 @@ function cambiarFrase() {
 }
 
 cambiarFrase();
-setInterval(cambiarFrase, 8000);
+setInterval(cambiarFrase, 6000);
