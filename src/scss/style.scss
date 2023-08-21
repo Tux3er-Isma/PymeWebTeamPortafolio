@@ -47,27 +47,3 @@ i{
         font-size: 20px;
     }
 }
-
-@keyframes appeard-1{
-    0%{
-        display: none;
-        transform: translateX(-50px);
-    }
-
-    100%{
-        display: flex;
-        transform: translateX(0px);
-    }
-}
-
-@keyframes aappeard-1{
-    0%{
-        display: none;
-        transform: translateX(-50px);
-    }
-
-    100%{
-        display: flex;
-        transform: translateX(0px);
-    }
-}
