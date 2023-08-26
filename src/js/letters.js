@@ -55,18 +55,6 @@ function cambiarFrase() {
         totalFraseArr = [];
       }
     }
-    // previousFrase = frase;
-    // totalFraseArr.push(previousFrase);
-    // if (totalFraseArr.length != 1){
-    //   if (previousFrase == totalFraseArr[i - 1]){
-    //     currentFrase = frase;
-    //     console.log("La frase repetida es: " + frase);
-    //     totalFraseArr = [];
-    //     frase = frasesArr[Math.floor(Math.random*frasesArr.length)]
-    //   } else {
-    //     frase = frasesArr[Math.floor(Math.random() * frasesArr.length)];
-    //   }
-    // }
   }
   let fraseArr = Array.from(frase);
    if (frase == "<Diseños/> creativos"){
