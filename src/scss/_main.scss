@@ -1,5 +1,6 @@
 /*SCSS Files*/
 @use 'variables';
+@use 'mixins';
 
 /*Main Styles*/
 .main{
@@ -15,8 +16,8 @@
 
         &__title{
             margin-bottom: 20px;
+            @include mixins.info-c-title();
             width: 400px;
-            font-size: 28px;
         }
 
         &__txt{
@@ -32,20 +33,11 @@
         margin-top: 110px;
 
         &__info-container{
-            display: flex;
-            flex-direction: column;
+            @include mixins.main-info-container();
             justify-content: center;
-            align-items: center;
-            border-radius: 15px;
-            width: 400px;
-            height: 400px;
-            border: 1px solid variables.$white;
-            color: variables.$white;
 
             &__title{
-                margin-top: 15px;
-                width: 300px;
-                font-size: 40px;
+                @include mixins.info-c-title();
             }
 
             &__subtitle{
@@ -77,8 +69,10 @@
                         }
 
                         &__icon--2{
-                            border-radius: 10px;
+                            font-weight: bold;
                             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
                         }
 
                         &__icon--3{
@@ -94,17 +88,11 @@
         }
 
         &__gif-container{
+            @include mixins.gif-container();
             margin-left: 30px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 805px;
-            border: 1px solid variables.$white;
 
             &__gif{
-                border-radius: 15px;
-                width: 800px;
+                @include mixins.gif();
             }
         }
     }
@@ -415,23 +403,14 @@
         }
 
         &__info-container{
+            @include mixins.main-info-container();
             margin-left: 30px;
-            display: flex;
-            flex-direction: column;
             justify-content: space-around;
-            align-items: center;
-            border-radius: 15px;
-            width: 400px;
-            height: 400px;
-            border: 1px solid variables.$white;
-            color: variables.$white;
 
             &__txt-container{
 
                 &__title{
-                    margin-top: 15px;
-                    width: 300px;
-                    font-size: 40px;
+                    @include mixins.info-c-title();
                 }
 
                 &__subtitle{
@@ -455,6 +434,143 @@
 
                 &:hover{
                     cursor: pointer;
+                    background-color: variables.$white;
+                    color: variables.$black;
+                }
+            }
+        }
+    }
+
+    &__article--four{
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+    
+        &__info-container{
+            @include mixins.main-info-container();
+
+            &__title{
+                @include mixins.info-c-title();
+                width: 350px;
+            }
+
+            &__list-container{
+                margin-top: 30px;
+                width: 350px;
+                list-style-type: none;
+
+                &__items{
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    font-size: 15px;
+
+                    &__gradient-text{
+                        font-weight: bold;
+                        background: linear-gradient(#ff0, #f70, #f00);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+        }
+
+        &__gif-container{
+            @include mixins.gif-container();
+
+            &__gif{
+                @include mixins.gif();
+            }
+        }
+    }
+
+    &__article--five{
+        margin-top: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: variables.$white;
+
+        &__title{
+            margin-bottom: 20px;
+            @include mixins.info-c-title();
+            width: 400px;
+        }
+
+        &__txt{
+            font-size: 18px;
+            width: 400px;
+        }
+
+        &__little-txt{
+            font-size: 18px;
+            width: 400px;
+        }
+    }
+
+    &__article--six{
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__txt-container{
+            width: 400px;
+            color: variables.$white;
+
+            &__title{
+                @include mixins.info-c-title();
+                margin: 0px;
+            }
+
+            &__subtitle{
+                position: relative;
+                bottom: 10px;
+            }
+        }
+
+        &__form{
+            display: flex;
+            flex-direction: column;
+
+            &__terms-container{
+                display: flex;
+
+                &__checkbox{
+                    margin: 0px;
+                    width: 20px;
+                    margin-right: 5px;
+                }
+
+                &__txt{
+                    color: variables.$white;
+
+                    &__link{
+                        color: variables.$light-red;
+
+                        &:visited{
+                            color: variables.$light-red;
+                        }
+                    }
+                }
+            }
+
+            &__btn{
+                margin-top: 30px;
+                background-color: variables.$light-red;
+                color: variables.$dark-red;
+                border: none;
+                outline: none;
+                padding: 10px;
+                border-radius: 10px;
+                width: 200px;
+                cursor: pointer;
+                transition: all .5s;
+                font-weight: bold;
+                font-size: 20px;
+
+                &:hover{
                     background-color: variables.$white;
                     color: variables.$black;
                 }
@@ -532,6 +648,84 @@
                 border-radius: 0px;
                 margin: 0px;
                 width: 350px;
+            }
+        }
+
+        &__article--four{
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: center;
+
+            &__info-container{
+                height: 450px;
+                order: 2;
+                width: 350px;
+                border-radius: 0px;
+
+                &__title{
+                    width: 300px;
+                }
+
+                &__list-container{
+                    width: 300px;
+                }
+            }
+
+            &__gif-container{
+                margin-left: 0px;
+                order: 1;
+                border-radius: 0px;
+                width: 350px;
+
+                &__gif{
+                    border-radius: 0px;
+                    width: 345px;
+                }
+            }
+        }
+
+        &__article--five{
+
+            &__title{
+                width: 300px;
+                font-size: 60px;
+            }
+
+            &__txt{
+                width: 300px;
+                font-size: 15px;
+            }
+
+            &__little-txt{
+                width: 300px;
+                font-size: 15px;
+            }
+        }
+
+        &__article--six{
+            margin-top: 50px;
+
+            &__txt-container{
+                width: 300px;
+            }
+
+            &__form{
+                width: 300px;
+
+                &__terms-container{
+                    margin: 0px;
+                    width: 300px;
+
+                    &__txt{
+                        width: 300px;
+                        font-size: 13px;
+                    }
+                }
+
+                &__btn{
+                    width: 300px;
+                    font-size: 20px;
+                }
             }
         }
     }
