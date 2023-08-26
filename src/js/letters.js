@@ -22,6 +22,11 @@ let frasesArr = [
   "</Visibilidad> online",
 ];
 
+let currentFrase = "";
+let previousFrase = "";
+
+let totalFraseArr = [];
+
 let caracteres = ["@", "!", "·", "$", "%", ")", "=", "?"];
 
 function cambiarFrase() {
@@ -34,7 +39,35 @@ function cambiarFrase() {
     `
 
     document.head.appendChild(istyles);
-  let frase = frasesArr[Math.floor(Math.random() * frasesArr.length)];
+  let frase = frasesArr[Math.floor(Math.random()*frasesArr.length)];
+  totalFraseArr.push(frase);
+  for (let i = 0; i < totalFraseArr.length; i++){
+    if (totalFraseArr.length == 1){
+      previousFrase = totalFraseArr[0]
+    } else {
+      previousFrase = totalFraseArr[i - 1];
+      currentFrase = frase;
+
+      if (previousFrase == currentFrase){
+        console.log(`La frase duplicada es: ${currentFrase}`);
+        frase = frasesArr[Math.floor(Math.random()*frasesArr.length)];
+
+        totalFraseArr = [];
+      }
+    }
+    // previousFrase = frase;
+    // totalFraseArr.push(previousFrase);
+    // if (totalFraseArr.length != 1){
+    //   if (previousFrase == totalFraseArr[i - 1]){
+    //     currentFrase = frase;
+    //     console.log("La frase repetida es: " + frase);
+    //     totalFraseArr = [];
+    //     frase = frasesArr[Math.floor(Math.random*frasesArr.length)]
+    //   } else {
+    //     frase = frasesArr[Math.floor(Math.random() * frasesArr.length)];
+    //   }
+    // }
+  }
   let fraseArr = Array.from(frase);
    if (frase == "<Diseños/> creativos"){
     icon = '<i class="fa-solid fa-code"></i>';
@@ -49,6 +82,7 @@ function cambiarFrase() {
   }
   fraseArr.push(icon);
   container.innerHTML = "";
+
   for (let i = 0; i < fraseArr.length; i++) {
     let newItem = document.createElement('DIV');
     newItem.classList.add(`header__letters-container__container__item-${i}`);
