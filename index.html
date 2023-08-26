@@ -8,6 +8,15 @@
     <title>Terminal</title>
     <!-- CSS File -->
     <link rel="stylesheet" href="/public/css/style.css" type="text/css">
+        <!--EMAILJS-->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("X6pkrObWu01IUXl5A");
+            })();
+        </script>
     <!-- Google Fonts -->
     <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,12 +136,60 @@
                     <h1 class="main__article--three__info-container__txt-container__title">Como trabajamos</h1>
                     <p class="main__article--three__info-container__txt-container__subtitle">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
-                <button type="button" class="main__article--three__info-container__btn">Descargar esquema</button>
+                <button type="button" class="main__article--three__info-container__btn">Descargar presentación</button>
             </div>
+        </article>
+        <article class="main__article--four">
+            <div class="main__article--four__info-container">
+                <h1 class="main__article--four__info-container__title">¿Por qué nosostros?</h1>
+                <ul class="main__article--four__info-container__list-container">
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--1">- Diseños personalizados y profesionales</li>
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--2">- Especializados en paginas web <span class="main__article--four__info-container__list-container__items__gradient-text">vendedoras</span></li>
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--3">- Interfaz intuitiva</li>
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--4">- Estrategias <span class="main__article--four__info-container__list-container__items__gradient-text">SEO</span> para ganar visibilidad <br> online</li>
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--5">- Soporte continuo y actualizaciones</li>
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--6">- Precios competitivos</li>
+                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--7">- Diseños adaptados a cualquier dispositivo</li>
+                </ul>
+            </div>
+            <div class="main__article--four__gif-container">
+                <img src="/public/assets/gifs/responsive-gif.gif" alt="GIF" class="main__article--four__gif-container__gif">
+            </div>
+        </article>
+        <article class="main__article main__article--five">
+            <h1 class="main__article__title main__article--five__title">Nosotros</h1>
+            <p class="main__article__txt main__article--five__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia explicabo vero vel. Minima sapiente est accusamus vel laudantium. Ad doloremque voluptates nesciunt quis molestiae atque libero, quo inventore in.</p>
+            <br>
+            <p class="main__article--five__little-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsam?</p>
+            <br>
+            <p class="main__article--five__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, minima? Commodi sapiente explicabo doloremque aperiam molestiae, dignissimos asperiores animi itaque voluptates. Iste perferendis adipisci necessitatibus ut ab, quia voluptatum impedit.</p>
+            <br>
+        </article>
+        <article class="main__article--six">
+            <div class="main__article--six__txt-container">
+                <h1 class="main__article--six__txt-container__title">Contáctanos</h1>
+                <p class="main__article--six__txt-container__subtitle">¿Alguna consulta? Contacta con nosotros.</p>
+            </div>
+            <form onsubmit="return false" class="main__article--six__form">
+                <label for="main__article--six__form__name-inpt">Nombre</label>
+                <input type="text" placeholder="Nombre" class="main__article--six__form__name-inpt" required>
+                <label for="main__article--six__form__email-inpt">Email</label>
+                <input type="email" placeholder="Email" class="main__article--six__form__email-inpt" required>
+                <label for="main__article--six__form__about-inpt">Asunto</label>
+                <input type="text" placeholder="Asunto" class="main__article--six__form__about-inpt" required>
+                <label for="main__article--six__form__message-inpt">Mensaje</label>
+                <textarea placeholder="Por favor escriba su mensaje aquí" class="main__article--six__form__message-inpt" required></textarea>
+                <div class="main__article--six__form__terms-container">
+                    <input type="checkbox" class="main__article--six__form__terms-container__checkbox" required>
+                    <label for="main__article--six__form__terms-container__checkbox" class="main__article--six__form__terms-container__txt">He leído y acepto la <a href="#" class="main__article--six__form__terms-container__txt__link">Política de Privacidad</a></label>
+                </div>
+                <button type="submit" class="main__article--six__form__btn">Enviar</button>
+            </form>
         </article>
     </main>
     <script src="/src/js/index.js"></script>
     <script src="/src/js/letters.js"></script>
     <script src="/src/js/workC.js"></script>
+    <script src="/src/js/form.js"></script>
 </body>
 </html>
