@@ -1,0 +1,29 @@
+/*SCSS Files*/
+@use 'variables';
+@use 'mixins';
+
+/*Footer Styles*/
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: variables.$light-dark;
+
+    &__btn{
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        margin-right: 30px;
+        transition: all .5s;
+
+        &:hover{
+            cursor: pointer;
+            background-color: variables.$light-red;
+        }
+    }
+}
