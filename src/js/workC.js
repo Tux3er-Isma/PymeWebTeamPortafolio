@@ -31,7 +31,7 @@ const workDArr = [workFArr[1], workFArr[3], workFArr[5], workFArr[7], workFArr[9
 
 // observer.observe(workDArr[0])
 // observer.observe(workFArr[2])
-if (window.screen.availWidth > 480){
+if (window.screen.availWidth > 900){
     workFArr[2].classList.replace("main__article--three__work-container__reverse-arrow-container", "main__article--three__work-container__arrow-container");
 
 
@@ -186,4 +186,15 @@ if (window.screen.availWidth > 480){
         distance: '100px',
         duration: 1500
     })
+}
+
+for (let i = 0; i < workDArr.length; i++){
+    console.log(workDArr[i].childNodes[1].innerHTML)
+    if (window.screen.availWidth <= 840){
+        workDArr[3].childNodes[1].innerHTML = "Pruebas <br> y ajustes <br> <small>Con el cliente</small>";
+        workDArr[5].childNodes[1].innerHTML = "Mantenimiento y Actualizaciones";
+    } else {
+        workDArr[5].childNodes[1].innerHTML = `Pruebas <br> y ajustes <br> <small>Con el cliente</small>`;
+        workDArr[3].childNodes[1].innerHTML = "Mantenimiento y Actualizaciones";
+    }
 }
