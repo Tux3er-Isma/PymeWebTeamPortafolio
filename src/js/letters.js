@@ -147,7 +147,17 @@ function cambiarFrase() {
             gridColumnValue += '25px' + ' ';
             gridRowValue += '40px' + ' ';
         }
-    } else {
+    } else if (window.screen.availWidth <= 900 && window.screen.availWidth >= 481){
+      itemsArr.forEach(item =>{
+        item.style.width = '42px';
+        item.style.head = '62';
+        item.style.fontSize = '30px';
+      })
+      for (let i = 0; i < line1Length; i++){
+        gridColumnValue += '42px' + ' ';
+        gridRowValue += '62px' + ' ';
+      }
+    }else {
         itemsArr.forEach(item =>{
             item.style.width = '64px';
             item.style.height = '95px';
