@@ -4,8 +4,9 @@
 
 /*Footer Styles*/
 .footer{
+    box-shadow: -10px 0px 100px -30px variables.$light-red;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     padding-top: 30px;
@@ -18,7 +19,7 @@
         border-radius: 15px;
         outline: none;
         border: none;
-        margin-right: 30px;
+        margin-left: 30px;
         transition: all .5s;
 
         &:hover{
