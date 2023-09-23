@@ -107,7 +107,6 @@ sCArr.forEach(container =>{
                     txt2Arr.push(txt2);
                     txt2.style.display = 'none';
                     loaderArr.push(loader);
-                    console.log(txt2Arr);
                     //
         getBotMessage();
     })
@@ -367,9 +366,7 @@ async function getBotMessage(){
         let lettersTxt2Arr;
             txt2Arr[txt2Arr.length - 1].innerHTML = data.choices[0].message.content;
             lettersTxt2Arr = Array.from(txt2Arr[txt2Arr.length - 1].innerHTML);
-        console.log(data.choices[0].message.content);
         typingLength = lettersTxt2Arr.length;
-        console.log(userMessage)
 
 
         let currentCharIndex = 0;
@@ -477,7 +474,6 @@ chatInptIcon.addEventListener('click', () =>{
         
                 txt2Arr.push(txt2);
                 loaderArr.push(loader);
-                console.log(loaderArr);
                 //
         getBotMessage();
     }
@@ -563,7 +559,6 @@ chatInpt.addEventListener('keydown', (evt) =>{
             
                     txt2Arr.push(txt2);
                     loaderArr.push(loader);
-                    console.log(loaderArr);
                     //
             getBotMessage();
         }
