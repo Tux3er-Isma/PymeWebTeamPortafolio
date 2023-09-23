@@ -59,6 +59,10 @@ body{
     }
 }
 
+.title-container{
+    display: none;
+}
+
 pre{
     white-space: pre-wrap;
 }
@@ -108,6 +112,25 @@ textarea{
 
     input, textarea{
         width: 300px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .title-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 120px;
+        width: 100vw;
+        
+        &__title{
+            display: block;
+            width: 300px;
+            justify-self: center;
+        }
     }
 }
 
