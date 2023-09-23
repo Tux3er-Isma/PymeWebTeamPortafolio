@@ -54,12 +54,6 @@
             }
         }
 
-        &__mockup-container--one{
-
-            &__mockup{
-            }
-        }
-
         &__title{
             margin-bottom: 20px;
             @include mixins.info-c-title();
@@ -713,7 +707,7 @@
             margin-bottom: 50px;
 
             &__mockup{
-                width: 400px;
+                width: 350px;
             }
  
             &__title{
@@ -914,7 +908,7 @@
 
                 &__terms-container{
                     margin: 0px;
-                    width: 300px;
+                    width: 350px;
 
                     &__txt{
                         width: 300px;
