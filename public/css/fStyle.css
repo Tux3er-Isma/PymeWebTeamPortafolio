@@ -169,6 +169,7 @@
   }
   .header__btn-container__btn--2 {
     width: 300px;
+    margin-left: 10px;
   }
 }
 @media only screen and (max-width: 900px) and (min-width: 481px) {
@@ -830,6 +831,9 @@
 @media only screen and (max-width: 480px) {
   .main {
     margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .main__article--one {
     flex-direction: column;
@@ -912,6 +916,7 @@
     margin-top: 50px;
     flex-direction: column;
     align-items: center;
+    width: 330px;
   }
   .main__article--four__info-container {
     height: 570px;
@@ -933,10 +938,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 50px;
+    margin-left: 30px;
   }
   .main__article--four__info-container__list-container__items {
-    width: 330px;
+    width: 300px;
   }
   .main__article--four__info-container__list-container__items__gradient-text-d {
     display: none;
@@ -1282,7 +1287,7 @@
 /*Responsive Footer Styles*/
 @media only screen and (max-width: 480px) {
   .footer {
-    width: 100vw;
+    width: 400px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1617,11 +1622,13 @@
     z-index: 30;
   }
   .chat__main {
+    width: 105vw;
+    height: 110vh;
     position: fixed;
   }
   .chat__main__title {
     margin-top: 100px;
-    width: 350px;
+    width: 300px;
   }
   .chat__main__chat-container {
     display: flex;
@@ -1639,7 +1646,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    bottom: 130px;
+    bottom: 230px;
     z-index: 0;
   }
   .chat__main__suggestions-container__items {
@@ -1648,6 +1655,7 @@
   .chat__main__suggestions-container__items:hover::after {
     align-self: center;
     content: "";
+    display: none;
     position: absolute;
     background-color: #fff;
     width: 300px;
@@ -1656,7 +1664,8 @@
     opacity: 0.05;
   }
   .chat__main__inpt-container {
-    bottom: 60px;
+    width: 320px;
+    bottom: 140px;
     justify-content: center;
   }
   .chat__main__inpt-container__inpt {
@@ -1824,6 +1833,10 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.title-container {
+  display: none;
+}
+
 pre {
   white-space: pre-wrap;
 }
@@ -1870,6 +1883,22 @@ textarea {
   }
   input, textarea {
     width: 300px;
+  }
+  .logo {
+    display: none;
+  }
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 120px;
+    width: 100vw;
+  }
+  .title-container__title {
+    display: block;
+    width: 300px;
+    justify-self: center;
   }
 }
 @media only screen and (max-width: 840px) and (min-width: 481px) {
