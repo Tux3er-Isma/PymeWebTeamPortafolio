@@ -1,16 +1,29 @@
 window.sr = ScrollReveal();
 
+const markdownIt = window.markdownit();
+
+// const hola = document.querySelector('.hola');
+// const textoMarkdown = "Este es un **texto en negrita** y este es *texto en cursiva*.";
+
+// // Procesar el texto Markdown
+// const resultadoHTML = markdownIt.render(textoMarkdown);
+
+// // Mostrar el resultado en tu HTML
+// // hola.innerHTML = resultadoHTML;
+
 const chat = document.querySelector('.chat');
 const chatPopUpContainer = document.querySelector('.chat__popup-container');
 const chatBar = document.querySelector('.chat__bar');
 const chatIcon = document.querySelector('.chat__bar__icon');
 const chatMain = document.querySelector('.chat__main');
+const chatTitle = document.querySelector('.chat__main__title');
 const suggestionsContainer = document.querySelector('.chat__main__suggestions-container');
 const sCArr = suggestionsContainer.childNodes;
 const chatInpt = document.querySelector('.chat__main__inpt-container__inpt');
 const chatInptIcon = document.querySelector('.chat__main__inpt-container__icon-container__icon');
 const chatContainer = document.querySelector('.chat__main__chat-container');
 const arrowDown = document.querySelector('.header__letters-container__arrow-down');
+const footer = document.querySelector('.footer');
 let chatIconC = true;
 let typingLength = 0;
 let userMessage = "";
@@ -31,6 +44,7 @@ setTimeout(() =>{
 
 sCArr.forEach(container =>{
     container.addEventListener('click', () =>{
+        chatTitle.style.display = 'none';
         userMessage = container.childNodes[1].textContent;
         chatInpt.setAttribute('readonly', true);
         chatInpt.style.cursor = 'not-allowed';
@@ -51,7 +65,7 @@ sCArr.forEach(container =>{
                     const pictureContainer2 = document.createElement('PICTURE');
                     let profile2 = document.createElement('IMG');
                     const txt2Container = document.createElement('DIV');
-                    let txt2 = document.createElement('P');
+                    let txt2 = document.createElement('PRE');
                 
                     const cursor = document.createElement('span');
                     cursor.className = 'cursor';
@@ -175,6 +189,7 @@ chatBar.addEventListener('click', () =>{
         // }
         chatMain.style.zIndex = '12';
         chatMain.style.opacity = '1';
+        footer.style.zIndex = '0';
         document.body.style.overflowY = 'hidden';
         sCArr[1].style.opacity = '1';
         if (window.screen.availWidth <= 900){
@@ -220,6 +235,7 @@ chatBar.addEventListener('click', () =>{
         } else {
             chatMain.style.zIndex = '0';
         }
+        footer.style.zIndex = '12';
         chatBar.style.bottom = '20px';
         chatMain.style.opacity = '0';
         chatIcon.src = "https://cdn.discordapp.com/attachments/973568724722389052/1145322729181036585/comentario-alt_2.png";
@@ -260,56 +276,79 @@ async function getBotMessage(){
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: `Hola, somos Isma y Xavi, dos emprendedores con una visión clara: ayudar a las pequeñas y medianas empresas a tener una sólida presencia en internet a través de páginas web efectivas. Nuestra juventud es nuestra ventaja, ya que combinamos pasión, creatividad y conocimiento técnico con un compromiso inquebrantable hacia la satisfacción del cliente.
+            messages: [{role: "user", content: ` 
 
-            Queremos ser tu aliado tecnológico en este emocionante viaje hacia el éxito en línea. Confía en nosotros para crear una presencia web que refleje la esencia y el valor de tu negocio
+            Eres un asistente de IA de una empresa llamada Pyme Web. Todas tus respuestas deben estar en formato MarkDown
+
+            Somos una empresa llamada Pyme Web Team (recuerda que el prompt tiene que estar escrito en imperativo)
+
+            Quiénes somos
+            Hola, somos Isma y Xavi (Pyme Web Team), dos emprendedores con una visión clara: ayudar a las pequeñas y medianas empresas a tener una sólida presencia en internet a través de páginas web efectivas. Nuestra juventud es nuestra ventaja, ya que combinamos pasión, creatividad y conocimiento técnico con un compromiso inquebrantable hacia la satisfacción del cliente.
+            
+            Queremos ser tu aliado tecnológico en este emocionante viaje hacia el éxito en línea. Confía en nosotros para crear una presencia web que refleje la esencia y el valor de tu negocio. Descubre más sobre nosotros 
+            
             
             Qué hacemos
-            NOS ESPECIALIZAMOS EN:
+            Nos especializamos en:
              Diseño y desarrollo (Páginas web)
-             Creción y edición de videos para redes sociales
+             Creación y edición de videos para redes sociales
              Mantenimiento y actualización continua
              Copy Writing
             
-            
             Cómo trabajamos
-            Seguimos unas pautas/pasos
+            Seguimos unas pautas y pasos para proporcionar el mejor servicio:
             
-            1.Consulta C/C y planificacion
-            2 Diseño creativo y propuesta
-            3 Desarrollo tecnico
-            4.Pruebas y ajustes
-            5.Lanzamiento y entrega
-            6.Mantenimiento y actualizaciones
+            1: Consulta y planificacion con el cliente
+            2: Diseño creativo y propuesta
+            3:Desarrollo tecnico
+            4:Pruebas y ajustes
+            5: Entrega y lanzamiento
+            6: Mantenimiento y actualizaciones
             
-            Por qué nosotros
+            
+            Por qué con nosotros
+            Te ofrecemos:
             
             - Diseños personalizados y profesionales
             - Especializados en paginas web vendedoras
             - Interfaz intuitiva
             - Estrategias SEO para ganar visibilidad
-            online
+               online
             - Soporte continuo y actualizaciones
             - Precios competitivos
-            - Diseños adaptados a cualquier dispositivo
+            - Diseños adaptados a cualquier
+               dispositivo
+            - Uso de la última tecnologia de Inteligencia
+               Artificial
             
-            Sobre nosotros:
             
-            ¡Bienvenidos a nuestro mundo digital! En un mundo cada vez más conectado, la presencia en línea, es fundamental para el éxito de cualquier empresa. Nos hemos embarcado en la misión de brindar a las PYMES las herramientas que necesitan para competir en este entorno digital en constante evolución. A pesar de nuestra juventud, -quizá te sorprenda cuando nos conozcas personalmente- no subestimes nuestra experiencia y conocimiento. Hemos crecido con la tecnología y comprendemos sus matices como pocos.
+            (Esta parte explica un poco quienes somos más allá de lo que he puesto antes)
+            
+            En un mundo cada vez más conectado, la presencia en línea, es fundamental para el éxito de cualquier empresa. Nos hemos embarcado en la misión de brindar a las PYMES las herramientas que necesitan para competir en este entorno digital en constante evolución.
+            
+            A pesar de nuestra juventud, -quizá te sorprenda cuando nos conozcas personalmente- no subestimes nuestra experiencia y conocimiento. Hemos crecido con la tecnología y comprendemos sus matices como pocos.
             
             Hemos trabajado incansablemente para perfeccionar nuestras habilidades y conocimientos en el diseño y desarrollo de páginas web. Lo más importante es que amamos lo que hacemos, y esto se refleja en la calidad de nuestro trabajo. Estamos comprometidos con la excelencia y nos enorgullece ofrecer soluciones web que no solo son hermosas desde un punto de vista estético, sino que también están diseñadas para impulsar el éxito comercial de nuestros clientes.
             
-            Sólo queda decir que estamos listos para ser tu aliado tecnológico en el viaje hacia el éxito en línea. Confía en nosotros para crear una presencia web que refleje la esencia y el valor de tu negocio. ¡Únete a nosotros en este emocionante viaje! ¿El primer paso? ¡Contacta con nosotros!
+            Sólo queda decir que estamos listos para ser tu aliado tecnológico en el viaje hacia el éxito en línea. Confía en nosotros para crear una presencia web que refleje la esencia y el valor de tu negocio.
             
-            Como contactarnos:
+            ¡Únete a nosotros en este emocionante viaje! ¿El primer paso? ¡Contacta con nosotros!
             
-            Al final de la pagina web hay un formulario para contactar con nosotros.
+            Contactanos
+            para contactarnos o conceder una entrevista pueden acceder al formulario que se encuentra al final de la pagina web,
             
-            ¿Como descargar el portfolio?
+            Descargar presentacion
+            Para descargar la presentacion/portfolio los usuarios pueden descargarlo apretando el boton de "Descargar presentacion" que se encuentra en la web
             
-            Puedes ir al boton que se encuentra en la seccion Cómo trabajamos. (Donde pone descargar presentación) O abajo de todo de la web en el boton (Descargar Portoflio)
+            dominamos los lenguajes de programacion: HTML, CSS, JS, SASS, ASTRO (js)
+            
+            No completes las palabras solo da tu respuesta recuerda que eres un asistente. Tu función es responder al cliente con información proporcionada anteriormente
+
+            Cuando lo creas necesario crea un formato de lista o esquema. Que quede más dinámico el resultado.
+
            Reponde a esta oracion: ${userMessage}`}],
-            max_tokens: 500
+            max_tokens: 500,
+            temperature: 0.5
         })
     }
 
@@ -375,6 +414,7 @@ chatInptIcon.addEventListener('click', () =>{
         })
         document.body.appendChild(errorPopup);
     } else {
+        chatTitle.style.display = 'none';
         chatInpt.setAttribute('readonly', true);
         chatInpt.style.cursor = 'not-allowed';
         chatInpt.value = "";
@@ -394,7 +434,7 @@ chatInptIcon.addEventListener('click', () =>{
                 const pictureContainer2 = document.createElement('PICTURE');
                 let profile2 = document.createElement('IMG');
                 const txt2Container = document.createElement('DIV');
-                let txt2 = document.createElement('P');
+                let txt2 = document.createElement('PRE');
             
                 const cursor = document.createElement('span');
                 cursor.className = 'cursor';
@@ -460,6 +500,7 @@ chatInpt.addEventListener('keydown', (evt) =>{
             })
             document.body.appendChild(errorPopup);
         } else {
+            chatTitle.style.display = 'none';
             chatInpt.setAttribute('readonly', true);
             chatInpt.style.cursor = 'not-allowed';
             chatInpt.value = "";
@@ -479,7 +520,7 @@ chatInpt.addEventListener('keydown', (evt) =>{
                     const pictureContainer2 = document.createElement('PICTURE');
                     let profile2 = document.createElement('IMG');
                     const txt2Container = document.createElement('DIV');
-                    let txt2 = document.createElement('P');
+                    let txt2 = document.createElement('PRE');
                 
                     const cursor = document.createElement('span');
                     cursor.className = 'cursor';
