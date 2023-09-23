@@ -42,6 +42,23 @@ body{
     color: #fff;
 }
 
+.logo{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    &__img{
+        position: absolute;
+        width: 50px;
+        transition: all .5s;
+        z-index: 30;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
 pre{
     white-space: pre-wrap;
 }
@@ -139,7 +156,7 @@ textarea{
     font-size: 7px;
     position: relative;
     left: 40px;
-    bottom: 10px;
+    bottom: 5px;
     text-indent: -9999em;
     transform: translateZ(0);
     animation-delay: -0.16s;
