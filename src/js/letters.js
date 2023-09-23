@@ -5,7 +5,7 @@ window.addEventListener('blur', function() {
 
 // Función para restaurar el título cuando el usuario vuelve a la página
 window.addEventListener('focus', function() {
-  document.title = 'Terminal';
+  document.title = 'Pyme Web';
 });
 
 
