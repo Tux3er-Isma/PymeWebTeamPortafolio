@@ -1,8 +1,8 @@
 {
-  "name": "portafolio",
+  "name": "Pyme Web Team",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/src/js/index.js",
   "scripts": {
     "sass": "sass --watch src/scss/style.scss public/css/style.css",
     "ngrok": "ngrok http 127.0.0.1:5501"
