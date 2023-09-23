@@ -61,3 +61,16 @@
         font-weight: 100;
     }
 }
+
+@media only screen and (max-width: 480px){
+    .terms{
+
+
+        &__title{
+
+            &::after{
+                width: 200px;
+            }
+        }
+    }
+}
