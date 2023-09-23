@@ -139,7 +139,7 @@
             align-self: center;
             width: 100vw;
             margin-top: 200px;
-            opacity: .1;
+            opacity: 1;
             width: 500px;
         }
 
@@ -174,17 +174,37 @@
 
 
                 &__picture-container{
-                    width: 30px;
-                    height: 30px;
-                    background-color: #777;
+                    width: 40px;
+                    height: 40px;
+                    // background-color: #fff;
                     border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px;
 
                     &__img{
-                        align-self: flex-start;
                         width: 30px;
-                        height: 30px;
+                        align-self: center;
                         border-radius: 5px;
                     }
+
+                    &__img--1{
+                        width: 40px;
+                    }
+
+                    &__img--2{
+                        position: relative;
+                    }
+                }
+
+                &__picture-container--1{
+                    background-color: #fff;
+                }
+
+                &__picture-container--2{
+                    background-color: #343541;
+                    position: relative;
                 }
 
                 &__txt{
