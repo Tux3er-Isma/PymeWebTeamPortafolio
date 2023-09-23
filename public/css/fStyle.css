@@ -836,7 +836,7 @@
     margin-bottom: 50px;
   }
   .main__article--one__mockup {
-    width: 400px;
+    width: 350px;
   }
   .main__article--one__title {
     font-size: 40px;
@@ -994,7 +994,7 @@
   }
   .main__article--six__form__terms-container {
     margin: 0px;
-    width: 300px;
+    width: 350px;
   }
   .main__article--six__form__terms-container__txt {
     width: 300px;
@@ -2009,4 +2009,4 @@ small {
   font-weight: 600;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=fStyle.css.map */
