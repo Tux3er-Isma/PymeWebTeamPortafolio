@@ -30,6 +30,16 @@ let userMessage = "";
 const txt2Arr = [];
 const loaderArr = [];
 
+const logoImg = document.querySelector('.logo__img');
+
+logoImg.addEventListener('mouseover', () =>{
+  logoImg.style.animation = 'grandy .1s forwards';
+})
+
+logoImg.addEventListener('mouseout', () =>{
+  logoImg.style.animation = 'chicky .1s forwards';
+})
+
 chatInpt.removeAttribute('readonly', false);
 chatInpt.style.cursor = 'text';
 
@@ -44,6 +54,10 @@ setTimeout(() =>{
 
 sCArr.forEach(container =>{
     container.addEventListener('click', () =>{
+        sCArr[1].style.display = 'none';
+        sCArr[3].style.display = 'none';
+        sCArr[5].style.display = 'none';
+        sCArr[7].style.display = 'none';
         chatTitle.style.display = 'none';
         userMessage = container.childNodes[1].textContent;
         chatInpt.setAttribute('readonly', true);
@@ -74,7 +88,7 @@ sCArr.forEach(container =>{
                     txt1.innerHTML = userMessage;
                 
                     profile1.setAttribute('src', "https://cdn2.iconfinder.com/data/icons/instagram-outline/19/11-512.png");
-                    profile2.setAttribute('src', "https://i.pinimg.com/200x150/74/bb/34/74bb340ffe87e31837a04a538f1bbc10.jpg");
+                    profile2.setAttribute('src', "https://cdn.discordapp.com/attachments/973568724722389052/1155097462038614116/W_logo.png");
                 
                     contianer1.classList.add('chat__main__chat-container__container');
                     contianer2.classList.add('chat__main__chat-container__container');
@@ -82,6 +96,8 @@ sCArr.forEach(container =>{
                     contianer2.classList.add('chat__main__chat-container__container--2');
                     pictureContainer1.classList.add('chat__main__chat-container__container__picture-container');
                     pictureContainer2.classList.add('chat__main__chat-container__container__picture-container');
+                    pictureContainer1.classList.add('chat__main__chat-container__container__picture-container--1');
+                    pictureContainer2.classList.add('chat__main__chat-container__container__picture-container--2');
                     profile1.classList.add('chat__main__chat-container__container__picture-container__img');
                     profile2.classList.add('chat__main__chat-container__container__picture-container__img');
                     profile1.classList.add('chat__main__chat-container__container__picture-container__img--1');
@@ -191,6 +207,7 @@ chatBar.addEventListener('click', () =>{
         footer.style.zIndex = '0';
         document.body.style.overflowY = 'hidden';
         sCArr[1].style.opacity = '1';
+        logoImg.style.display = 'none';
         if (window.screen.availWidth <= 900){
             chatBar.style.top = '10px';
             chatMain.style.top = `${0}px`;
@@ -234,6 +251,7 @@ chatBar.addEventListener('click', () =>{
         } else {
             chatMain.style.zIndex = '0';
         }
+        logoImg.style.display = 'block';
         footer.style.zIndex = '12';
         chatBar.style.bottom = '20px';
         chatMain.style.opacity = '0';
@@ -411,6 +429,10 @@ chatInptIcon.addEventListener('click', () =>{
         })
         document.body.appendChild(errorPopup);
     } else {
+        sCArr[1].style.display = 'none';
+        sCArr[3].style.display = 'none';
+        sCArr[5].style.display = 'none';
+        sCArr[7].style.display = 'none';
         chatTitle.style.display = 'none';
         chatInpt.setAttribute('readonly', true);
         chatInpt.style.cursor = 'not-allowed';
@@ -440,7 +462,7 @@ chatInptIcon.addEventListener('click', () =>{
                 txt1.innerHTML = userMessage;
             
                 profile1.setAttribute('src', "https://cdn2.iconfinder.com/data/icons/instagram-outline/19/11-512.png");
-                profile2.setAttribute('src', "https://i.pinimg.com/200x150/74/bb/34/74bb340ffe87e31837a04a538f1bbc10.jpg");
+                profile2.setAttribute('src', "https://cdn.discordapp.com/attachments/973568724722389052/1155097462038614116/W_logo.png");
             
                 contianer1.classList.add('chat__main__chat-container__container');
                 contianer2.classList.add('chat__main__chat-container__container');
@@ -448,6 +470,8 @@ chatInptIcon.addEventListener('click', () =>{
                 contianer2.classList.add('chat__main__chat-container__container--2');
                 pictureContainer1.classList.add('chat__main__chat-container__container__picture-container');
                 pictureContainer2.classList.add('chat__main__chat-container__container__picture-container');
+                pictureContainer1.classList.add('chat__main__chat-container__container__picture-container--1');
+                pictureContainer2.classList.add('chat__main__chat-container__container__picture-container--2');
                 profile1.classList.add('chat__main__chat-container__container__picture-container__img');
                 profile2.classList.add('chat__main__chat-container__container__picture-container__img');
                 profile1.classList.add('chat__main__chat-container__container__picture-container__img--1');
@@ -496,6 +520,10 @@ chatInpt.addEventListener('keydown', (evt) =>{
             })
             document.body.appendChild(errorPopup);
         } else {
+            sCArr[1].style.display = 'none';
+            sCArr[3].style.display = 'none';
+            sCArr[5].style.display = 'none';
+            sCArr[7].style.display = 'none';
             chatTitle.style.display = 'none';
             chatInpt.setAttribute('readonly', true);
             chatInpt.style.cursor = 'not-allowed';
@@ -525,7 +553,7 @@ chatInpt.addEventListener('keydown', (evt) =>{
                     txt1.innerHTML = userMessage;
                 
                     profile1.setAttribute('src', "https://cdn2.iconfinder.com/data/icons/instagram-outline/19/11-512.png");
-                    profile2.setAttribute('src', "https://i.pinimg.com/200x150/74/bb/34/74bb340ffe87e31837a04a538f1bbc10.jpg");
+                    profile2.setAttribute('src', "https://cdn.discordapp.com/attachments/973568724722389052/1155097462038614116/W_logo.png");
                 
                     contianer1.classList.add('chat__main__chat-container__container');
                     contianer2.classList.add('chat__main__chat-container__container');
@@ -533,6 +561,8 @@ chatInpt.addEventListener('keydown', (evt) =>{
                     contianer2.classList.add('chat__main__chat-container__container--2');
                     pictureContainer1.classList.add('chat__main__chat-container__container__picture-container');
                     pictureContainer2.classList.add('chat__main__chat-container__container__picture-container');
+                    pictureContainer1.classList.add('chat__main__chat-container__container__picture-container--1');
+                    pictureContainer2.classList.add('chat__main__chat-container__container__picture-container--2');
                     profile1.classList.add('chat__main__chat-container__container__picture-container__img');
                     profile2.classList.add('chat__main__chat-container__container__picture-container__img');
                     profile1.classList.add('chat__main__chat-container__container__picture-container__img--1');
