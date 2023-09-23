@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Terminal-Portafolio">
-    <title>Terminal</title>
+    <title>Pyme Web</title>
     <!-- CSS File -->
-    <link rel="stylesheet" href="/public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/public/css/fStyle.css" type="text/css">
         <!--EMAILJS-->
         <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -17,6 +17,8 @@
                 emailjs.init("X6pkrObWu01IUXl5A");
             })();
         </script>
+    <!--SMTPJS-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Google Fonts -->
     <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,165 +36,250 @@
     <script src="https://kit.fontawesome.com/a1618bce8f.js" crossorigin="anonymous"></script>
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!--MD-->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@12.0.6/dist/markdown-it.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <nav class="header__nav">
-            <div class="header__nav__btn-container">
-                <button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--1">Explorar</button>
-                <button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--2">Contáctanos</button>
+    <div class="page-1">
+        <div class="chat" id="chat">
+            <div class="chat__popup-container">
+                <div class="chat__popup-container__popup">¿Tienes alguna duda? <br> Pregúntasela a nuestra <span class="chat__popup-container__popup__red-txt">IA</span></div>
+                <img src="https://cdn.discordapp.com/attachments/973568724722389052/1148265303462125608/triangulo-invertido.png" class="chat__popup-container__triangle">
             </div>
-        </nav>
-        <div class="header__title-container">
-            <h1 class="header__title-container__title">TERMINAL</h1>
+            <aside class="chat__bar">
+                <img src="https://cdn.discordapp.com/attachments/973568724722389052/1145322729181036585/comentario-alt_2.png" alt="" width="30" height="30" class="chat__bar__icon">
+            </aside>
+            <main class="chat__main">
+                <img src="https://cdn.discordapp.com/attachments/973568724722389052/1155097462827126855/PYM_logo_dark.png" alt="Logo" class="chat__main__title">
+                <div class="chat__main__chat-container"></div>
+                <div class="chat__main__suggestions-container">
+                    <div class="chat__main__suggestions-container__items">
+                        <h2 class="chat__main__suggestions-container__items__title">¿Que lenguaje de programación utilizais?</h2>
+                    </div>
+                    <div class="chat__main__suggestions-container__items">
+                        <h2 class="chat__main__suggestions-container__items__title">Me gustaria concertar una entrevista</h2>
+                    </div>
+                    <div class="chat__main__suggestions-container__items">
+                        <h2 class="chat__main__suggestions-container__items__title">¿Cuál es el precio de una página web?</h2>
+                    </div>
+                    <div class="chat__main__suggestions-container__items">
+                        <h2 class="chat__main__suggestions-container__items__title">¿Cuánto tardais en hacer una página web?</h2>
+                    </div>
+                </div>
+                <div class="chat__main__inpt-container">
+                    <input type="text" placeholder="Escribe tu pregunta aquí" class="chat__main__inpt-container__inpt">
+                    <div class="chat__main__inpt-container__icon-container">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1145336336933453865/parte-superior-del-avion-de-papel.png" alt="Flecha" class="chat__main__inpt-container__icon-container__icon">
+                    </div>
+                </div>
+            </main>
         </div>
-        <div class="header__letters-container">
-            <h2 class="header__letters-container__title">Imagina tener una página web que tuviera...</h2>
-            <div class="header__letters-container__container"></div>
-            <a href="#main"><img src="https://cdn.discordapp.com/attachments/973568724722389052/1142039485585043566/flecha-hacia-abajo.png" alt="Arrow-down" class="header__letters-container__arrow-down"></a>
+        <div class="logo">
+            <a href="/public/assets/docs/dossier.pdf" target="_blank"><img src="https://cdn.discordapp.com/attachments/973568724722389052/1155097462038614116/W_logo.png" alt="Logo" class="logo__img"></a>
         </div>
-        <div class="header__btn-container">
-            <button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--1 header__btn-container__btn--1">Explorar</button>
-            <button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--2 header__btn-container__btn--2">Contáctanos</button>
-        </div>
-    </header>
-    <main class="main" id="main">
-        <article class="main__article main__article--one">
-            <h1 class="main__article__title main__article--one__title">Quiénes somos</h1>
-            <p class="main__article__txt main__article--one__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia explicabo vero vel. Minima sapiente est accusamus vel laudantium. Ad doloremque voluptates nesciunt quis molestiae atque libero, quo inventore in.</p>
-            <br>
-            <p class="main__article__txt main__article--one__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia explicabo vero vel. Minima sapiente est accusamus vel laudantium. Ad doloremque voluptates nesciunt quis molestiae atque libero, quo inventore in.</p>
-        </article>
-        <article class="main__article main__article--two">
-            <div class="main__article__info-container main__article--two__info-container">
-                <h1 class="main__article__info-container__title main__article--two__info-container__title">Que Hacemos</h1>
-                <h2 class="main__article__info-container__subtitle main__article--two__info-container__subtitle">Lorem ipsum dolor sit amet.</>
-                <div class="main__article__info-container__skills-container main__article--two__info-container__skills-container">
-                    <h2 class="main__article__info-container__skills-container__title main__article--two__info-container__skills-container__title">NOS ESPECIALIZAMOS EN:</h2>
-                    <ul class="main__article__info-container__skills-container__list-container main__article--two__info-container__skills-container__list-container">
-                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-1"><p class="fa-solid fa-code main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--1"></p> Diseño y desarrollo (Páginas web)</li>
-                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-2"><p class="fa-brands fa-instagram main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--2"></p> Creción y edición de videos para redes sociales</li>
-                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-3"><p class="fa-solid fa-arrows-rotate main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--3"></p> Mantenimiento y actualización continua</li>
-                        <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-4"><p class="fa-solid fa-pencil main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--4"></p> Copy Writing</li>
+        <header class="header">
+            <nav class="header__nav">
+                <div class="header__nav__btn-container">
+                    <a href="#explore-container"><button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--1">Explorar</button></a>
+                    <a href="#contact"><button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--2">Contáctanos</button></a>
+                </div>
+            </nav>
+            <div class="header__letters-container">
+                <h2 class="header__letters-container__title">Imagina tener una página web que tuviera...</h2>
+                <div class="header__letters-container__container"></div>
+                <a href="#main"><img src="https://cdn.discordapp.com/attachments/973568724722389052/1142039485585043566/flecha-hacia-abajo.png" alt="Arrow-down" class="header__letters-container__arrow-down"></a>
+            </div>
+            <div class="header__btn-container">
+                <a href="#explore-container"><button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--1 header__btn-container__btn--1">Explorar</button></a>
+                <a href="#contact"><button type="button" class="header__nav__btn-container__btn header__nav__btn-container__btn--2 header__btn-container__btn--2">Contáctanos</button></a>
+            </div>
+        </header>
+        <main class="main" id="main">
+            <article class="main__article main__article--one">
+                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1153696041745514587/mokap.png" alt="Mockup" class="main__article--one__mockup" data-tilt data-tilt-reverse="true" data-tilt-full-page-listening>
+                <div>
+                    <h1 class="main__article__title main__article--one__title">Quiénes somos</h1>
+                    <p class="main__article__txt main__article--one__txt">
+                        Hola, somos Isma y Xavi, dos emprendedores con una visión clara: ayudar a las pequeñas y medianas empresas a tener una sólida presencia en internet a través de páginas web efectivas. Nuestra juventud es nuestra ventaja, ya que combinamos pasión, creatividad y conocimiento técnico con un compromiso inquebrantable hacia la satisfacción del cliente.
+                        <br><br>
+                        Queremos ser tu aliado tecnológico en este emocionante viaje hacia el éxito en línea. Confía en nosotros para crear una presencia web que refleje la esencia y el valor de tu negocio. Descubre más sobre nosotros
+                         <a href="#article-five" style="color: #ff4040;" class="main__article--one__link">aquí.</a></p>
+                </div>
+            </article>
+            <article class="main__article main__article--two" id="explore-container">
+                <div class="main__article__info-container main__article--two__info-container">
+                    <h1 class="main__article__info-container__title main__article--two__info-container__title">Qué hacemos</h1>
+                    <div class="main__article__info-container__skills-container main__article--two__info-container__skills-container">
+                        <h2 class="main__article__info-container__skills-container__title main__article--two__info-container__skills-container__title">Nos especializamos en:</h2>
+                        <ul class="main__article__info-container__skills-container__list-container main__article--two__info-container__skills-container__list-container">
+                            <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-1"><p class="fa-solid fa-code main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--1"></p> Diseño y desarrollo de páginas web</li>
+                            <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-2"><p class="fa-brands fa-instagram main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--2"></p> Creación y edición de videos para redes sociales</li>
+                            <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-3"><p class="fa-solid fa-arrows-rotate main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--3"></p> Mantenimiento y actualización continua</li>
+                            <li class="main__article__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__items main__article--two__info-container__skills-container__list-container__item-4"><p class="fa-solid fa-pencil main__article--two__info-container__skills-container__list-container__icon main__article--two__info-container__skills-container__list-container__items__icon--4"></p> Copy Writing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main__article__gif-container main__article--two__gif-container">
+                    <img src="/public/assets/gifs/gif.gif" alt="GIF" class="main__article__gif-container__gif main__article--two__gif-container__gif">
+                </div>
+            </article>
+            <article class="main__article main__article--three">
+                <div class="main__article__work-container main__article--three__work-container">
+                    <div class="main__article--three__work-container__star-container">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__star-container__little-star">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089312595345458/estrella_grande.png" alt="" class="main__article--three__work-container__star-container__big-star">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__star-container__little-star">
+                    </div>
+                    <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--1">
+                        <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Consulta y Planficación <br> <small>Con el cliente</small></p>
+                    </div>
+                    <div class="main__article__work-container__arrow-container main__article--three__work-container__arrow-container arrow-1">
+                        <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__large-arrow"></div>
+                        <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__head-arrow"></div>
+                    </div>
+                    <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--2">
+                        <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Diseño creativo <br>y propuesta</p>
+                    </div>
+                    <div class="main__article__work-container__arrow-container main__article--three__work-container__arrow-container arrow-2">
+                        <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__large-arrow"></div>
+                        <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__head-arrow"></div>
+                    </div>
+                    <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--3">
+                        <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt main__article--three__work-container__container--3__txt">Desarrollo <br>Técnico</p>
+                    </div>
+                    <div class="main__article--three__work-container__down-arrow-container arrow-3">
+                        <div class="main__article--three__work-container__down-arrow-container__long-arrow"></div>
+                        <div class="main__article--three__work-container__down-arrow-container__head-arrow"></div>
+                    </div>
+                    <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--4">
+                        <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Mantenimiento y Actualizaciones</p>
+                    </div>
+                    <div class="main__article--three__work-container__reverse-arrow-container arrow-4">
+                        <div class="main__article--three__work-container__reverse-arrow-container__large-arrow"></div>
+                        <div class="main__article--three__work-container__reverse-arrow-container__head-arrow"></div>
+                    </div>
+                    <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--5">
+                        <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Entrega y lanzamiento</p>
+                    </div>
+                    <div class="main__article--three__work-container__reverse-arrow-container arrow-5">
+                        <div class="main__article--three__work-container__reverse-arrow-container__large-arrow"></div>
+                        <div class="main__article--three__work-container__reverse-arrow-container__head-arrow"></div>
+                    </div>
+                    <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--6">
+                        <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt main__article--three__work-continer__container--6__txt">Pruebas y ajustes</p>
+                    </div>
+                    <div class="main__article--three__work-container__reverse-star-container">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089312595345458/estrella_grande.png" alt="" class="main__article--three__work-container__reverse-star-container__big-star">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__reverse-star-container__little-star">
+                    </div>
+                </div>
+                <div class="main__article--three__info-container">
+                    <div class="main__article--three__info-container__txt-container">
+                        <h1 class="main__article--three__info-container__txt-container__title">Cómo trabajamos</h1>
+                    </div>
+                    <a href="/public/assets/docs/dossier.pdf" target="_blank"><button type="button" class="main__article--three__info-container__btn">Ir a la presentación</button></a>
+                </div>
+            </article>
+            <article class="main__article--four">
+                <div class="main__article--four__info-container">
+                    <h1 class="main__article--four__info-container__title">Por qué con nosotros</h1>
+                    <p class="main__article--four__info-container__subtitle">Te ofrecemos:</p>
+                    <ul class="main__article--four__info-container__list-container">
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--1">- Diseños personalizados y profesionales</li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--2">- Especializados en paginas web <span class="main__article--four__info-container__list-container__items__gradient-text main__article--four__info-container__list-container__items__gradient-text--1">vendedoras</span></li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--3">- Interfaz intuitiva</li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--4">- Estrategias <span class="main__article--four__info-container__list-container__items__gradient-text main__article--four__info-container__list-container__items__gradient-text--2">SEO</span> para ganar visibilidad <br> <pre>   online</pre></li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--5">- Soporte continuo y actualizaciones</li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--6">- Precios competitivos</li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--7">- Diseños adaptados a cualquier <pre>   dispositivo</pre></li>
+                        <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--8">- Uso de la última tecnologia de <span class="main__article--four__info-container__list-container__items__gradient-text main__article--four__info-container__list-container__items__gradient-text--3">Inteligencia <pre class="main__article--four__info-container__list-container__items__gradient-text main__article--four__info-container__list-container__items__gradient-text-d">   Artificial</pre> <pre class="main__article--four__info-container__list-container__items__gradient-text main__article--four__info-container__list-container__items__gradient-text-r"> Artificial</pre></span></li>
                     </ul>
                 </div>
-            </div>
-            <div class="main__article__gif-container main__article--two__gif-container">
-                <img src="/public/assets/gifs/gif.gif" alt="GIF" class="main__article__gif-container__gif main__article--two__gif-container__gif">
-            </div>
-        </article>
-        <article class="main__article main__article--three">
-            <div class="main__article__work-container main__article--three__work-container">
-                <div class="main__article--three__work-container__star-container">
-                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__star-container__little-star">
-                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089312595345458/estrella_grande.png" alt="" class="main__article--three__work-container__star-container__big-star">
-                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__star-container__little-star">
+                <div class="main__article--four__gif-container">
+                    <img src="/public/assets/gifs/responsive-gif.gif" alt="GIF" class="main__article--four__gif-container__gif">
                 </div>
-                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--1">
-                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Consulta C/C y Planficación</p>
+            </article>
+            <article class="main__article main__article--five" id="article-five">
+                <div>
+                    <h1 class="main__article__title main__article--five__title">Bienvenid@s a nuestro mundo digital</h1>
+                    <p class="main__article--five__txt"> 
+                        <br><br>
+                        En un mundo cada vez más conectado, la presencia en línea, es fundamental para el éxito de cualquier empresa. Nos hemos embarcado en la misión de brindar a las PYMES las herramientas que necesitan para competir en este entorno digital en constante evolución.
+                        <br><br>
+                         A pesar de nuestra juventud, -quizá te sorprenda cuando nos conozcas personalmente- no subestimes nuestra experiencia y conocimiento. Hemos crecido con la tecnología y comprendemos sus matices como pocos.
+                        <br><br>
+                        Hemos trabajado incansablemente para perfeccionar nuestras habilidades y conocimientos en el diseño y desarrollo de páginas web. Lo más importante es que amamos lo que hacemos, y esto se refleja en la calidad de nuestro trabajo. Estamos comprometidos con la excelencia y nos enorgullece ofrecer soluciones web que no solo son hermosas desde un punto de vista estético, sino que también están diseñadas para impulsar el éxito comercial de nuestros clientes.
+                        <br><br>
+                        Sólo queda decir que estamos listos para ser tu aliado tecnológico en el viaje hacia el éxito en línea. Confía en nosotros para crear una presencia web que refleje la esencia y el valor de tu negocio.
+                        <br><br>
+                         ¡Únete a nosotros en este emocionante viaje! ¿El primer paso? ¡Contacta con nosotros!</p>
                 </div>
-                <div class="main__article__work-container__arrow-container main__article--three__work-container__arrow-container arrow-1">
-                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__large-arrow"></div>
-                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__head-arrow"></div>
+                    <div class="main__article--one__mockup-container--2">
+                        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1146095470859517952/Sin_titulo-6-1.png" alt="Mockup" class="main__article--one__mockup-container--2__mockup">
+                    </div>
+            </article>
+            <article class="main__article--six">
+                <div class="main__article--six__txt-container" id="contact">
+                    <h1 class="main__article--six__txt-container__title">Contáctanos</h1>
+                    <p class="main__article--six__txt-container__subtitle">¿Alguna consulta?</p>
                 </div>
-                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--2">
-                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Diseño creativo y propuesta</p>
-                </div>
-                <div class="main__article__work-container__arrow-container main__article--three__work-container__arrow-container arrow-2">
-                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__large-arrow"></div>
-                    <div class="main__article__work-container__arrow-container__head-arrow main__article--three__work-container__arrow-container__head-arrow"></div>
-                </div>
-                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--3">
-                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt main__article--three__work-container__container--3__txt">Desarrollo <br>Técnico</p>
-                </div>
-                <div class="main__article--three__work-container__down-arrow-container arrow-3">
-                    <div class="main__article--three__work-container__down-arrow-container__long-arrow"></div>
-                    <div class="main__article--three__work-container__down-arrow-container__head-arrow"></div>
-                </div>
-                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--4">
-                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Pruebas y ajustes (con el cliente)</p>
-                </div>
-                <div class="main__article--three__work-container__reverse-arrow-container arrow-4">
-                    <div class="main__article--three__work-container__reverse-arrow-container__large-arrow"></div>
-                    <div class="main__article--three__work-container__reverse-arrow-container__head-arrow"></div>
-                </div>
-                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--5">
-                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Lanzamiento y entrega</p>
-                </div>
-                <div class="main__article--three__work-container__reverse-arrow-container arrow-5">
-                    <div class="main__article--three__work-container__reverse-arrow-container__large-arrow"></div>
-                    <div class="main__article--three__work-container__reverse-arrow-container__head-arrow"></div>
-                </div>
-                <div class="main__article__work-container__containers main__article--three__work-container__containers main__article--three__work-container__container--6">
-                    <p class="main__article__work-container__containers__txt main__article--three__work-container__containers__txt">Mantenimiento y Actualizaciones</p>
-                </div>
-                <div class="main__article--three__work-container__reverse-star-container">
-                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089312595345458/estrella_grande.png" alt="" class="main__article--three__work-container__reverse-star-container__big-star">
-                    <img src="https://cdn.discordapp.com/attachments/973568724722389052/1142089313274834974/estrella_pequenisima_vaya.png" alt="" class="main__article--three__work-container__reverse-star-container__little-star">
-                </div>
-            </div>
-            <div class="main__article--three__info-container">
-                <div class="main__article--three__info-container__txt-container">
-                    <h1 class="main__article--three__info-container__txt-container__title">Como trabajamos</h1>
-                    <p class="main__article--three__info-container__txt-container__subtitle">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-                <button type="button" class="main__article--three__info-container__btn">Descargar presentación</button>
-            </div>
-        </article>
-        <article class="main__article--four">
-            <div class="main__article--four__info-container">
-                <h1 class="main__article--four__info-container__title">¿Por qué nosostros?</h1>
-                <ul class="main__article--four__info-container__list-container">
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--1">- Diseños personalizados y profesionales</li>
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--2">- Especializados en paginas web <span class="main__article--four__info-container__list-container__items__gradient-text">vendedoras</span></li>
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--3">- Interfaz intuitiva</li>
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--4">- Estrategias <span class="main__article--four__info-container__list-container__items__gradient-text">SEO</span> para ganar visibilidad <br> online</li>
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--5">- Soporte continuo y actualizaciones</li>
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--6">- Precios competitivos</li>
-                    <li class="main__article--four__info-container__list-container__items main__article--four__info-container__list-container__item--7">- Diseños adaptados a cualquier dispositivo</li>
-                </ul>
-            </div>
-            <div class="main__article--four__gif-container">
-                <img src="/public/assets/gifs/responsive-gif.gif" alt="GIF" class="main__article--four__gif-container__gif">
-            </div>
-        </article>
-        <article class="main__article main__article--five">
-            <h1 class="main__article__title main__article--five__title">Nosotros</h1>
-            <p class="main__article__txt main__article--five__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quia explicabo vero vel. Minima sapiente est accusamus vel laudantium. Ad doloremque voluptates nesciunt quis molestiae atque libero, quo inventore in.</p>
-            <br>
-            <p class="main__article--five__little-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ipsam?</p>
-            <br>
-            <p class="main__article--five__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, minima? Commodi sapiente explicabo doloremque aperiam molestiae, dignissimos asperiores animi itaque voluptates. Iste perferendis adipisci necessitatibus ut ab, quia voluptatum impedit.</p>
-            <br>
-        </article>
-        <article class="main__article--six">
-            <div class="main__article--six__txt-container">
-                <h1 class="main__article--six__txt-container__title">Contáctanos</h1>
-                <p class="main__article--six__txt-container__subtitle">¿Alguna consulta? Contacta con nosotros.</p>
-            </div>
-            <form onsubmit="return false" class="main__article--six__form">
-                <label for="main__article--six__form__name-inpt">Nombre</label>
-                <input type="text" placeholder="Nombre" class="main__article--six__form__name-inpt" required>
-                <label for="main__article--six__form__email-inpt">Email</label>
-                <input type="email" placeholder="Email" class="main__article--six__form__email-inpt" required>
-                <label for="main__article--six__form__about-inpt">Asunto</label>
-                <input type="text" placeholder="Asunto" class="main__article--six__form__about-inpt" required>
-                <label for="main__article--six__form__message-inpt">Mensaje</label>
-                <textarea placeholder="Por favor escriba su mensaje aquí" class="main__article--six__form__message-inpt" required></textarea>
-                <div class="main__article--six__form__terms-container">
-                    <input type="checkbox" class="main__article--six__form__terms-container__checkbox" required>
-                    <label for="main__article--six__form__terms-container__checkbox" class="main__article--six__form__terms-container__txt">He leído y acepto la <a href="#" class="main__article--six__form__terms-container__txt__link">Política de Privacidad</a></label>
-                </div>
-                <button type="submit" class="main__article--six__form__btn">Enviar</button>
-            </form>
-        </article>
-    </main>
-    <footer class="footer">
-        <button class="footer__btn">Descargar portafolio</button>
-    </footer>
+                <form onsubmit="return false" class="main__article--six__form">
+                    <label for="main__article--six__form__name-inpt">Nombre</label>
+                    <input type="text" placeholder="Nombre" class="main__article--six__form__name-inpt" required>
+                    <label for="main__article--six__form__email-inpt">Email</label>
+                    <input type="email" placeholder="Email" class="main__article--six__form__email-inpt" required>
+                    <label for="main__article--six__form__about-inpt">Asunto</label>
+                    <input type="text" placeholder="Asunto" class="main__article--six__form__about-inpt" required>
+                    <label for="main__article--six__form__message-inpt">Mensaje</label>
+                    <textarea placeholder="Por favor escriba su mensaje aquí" class="main__article--six__form__message-inpt" required></textarea>
+                    <div class="main__article--six__form__terms-container">
+                        <input type="checkbox" class="main__article--six__form__terms-container__checkbox" required>
+                        <pre for="main__article--six__form__terms-container__checkbox" class="main__article--six__form__terms-container__txt">He leído y acepto la <pre class="main__article--six__form__terms-container__txt__link">Política de Privacidad</pre></pre>
+                    </div>
+                    <button type="submit" class="main__article--six__form__btn">Enviar</button>
+                </form>
+            </article>
+        </main>
+        <footer class="footer">
+            <a href="/public/assets/docs/dossier.pdf" class="footer__link" target="_blank" download="PymeWebTeam-Porafolio"><button class="footer__link__btn">Descargar presentación</button></a>
+            <pre class="footer__copyright">Copyright &copy; 2023 Pyme Web Team. All rights reserved.           <a class="footer__copyright__link">Privacy Policy</a></pre>
+            <a class="footer__copyright__link-r">Privacy Policy</a>
+        </footer>
+    </div>
+    <div class="terms">
+        <img src="https://cdn.discordapp.com/attachments/973568724722389052/1152897398960558101/angulo-pequeno-izquierdo.png" alt="Close" class="terms__close">
+        <h1 class="terms__title">Política de Privacidad</h1>
+        <div class="terms__line"></div>
+        <p class="terms__txt">
+
+            Desde el equipo de Pyme Web Team, nos comprometemos a proteger y respetar tu privacidad mientras visitas nuestra página web dedicada a crear páginas web.
+            <br><br>
+            Esta Política de Privacidad tiene como objetivo explicarte cómo recopilamos, utilizamos, almacenamos y protegemos tus datos personales.
+            <br><br>
+            Al utilizar y acceder a nuestro sitio web, aceptas las prácticas descritas en esta Política de Privacidad.
+            <br><br>
+            Recopilación de información: Cuando visitas nuestro sitio web, podemos recopilar información personal identificable como tu nombre, dirección de correo electrónico y número de teléfono. Esta información se recopila cuando llenas los formularios de contacto o envías consultas a través de nuestro sitio web.
+            <br><br>
+            También recopilamos información no personal identificable, como datos demográficos y preferencias del usuario.
+            <br><br>
+            Uso de la información: La información personal que recopilamos se utiliza para comunicarnos contigo, responder a tus consultas y proporcionar servicios relacionados con el diseño y desarrollo de páginas web. También podemos utilizar tu información para personalizar tu experiencia en nuestro sitio web, mejorar nuestro servicio y enviarte actualizaciones y ofertas promocionales relacionadas con nuestro negocio.
+            <br><br>
+            Protección de la información: Nos comprometemos a mantener tus datos personales seguros y protegidos. Implementamos medidas de seguridad técnicas y organizativas para evitar el acceso no autorizado, el uso indebido, la divulgación o la modificación de tus datos personales. Sin embargo, debes tener en cuenta que ninguna transmisión de datos por Internet es 100% segura y, aunque nos esforzamos por proteger tu información, no podemos garantizar su seguridad absoluta.
+            <br><br>
+            Compartir información: No compartiremos tu información personal con terceros sin tu consentimiento, a menos que sea requerido por ley o con fines legales. Sin embargo, podemos compartir información no personal identificable con proveedores de servicios y socios comerciales para mejorar nuestros servicios y personalizar tu experiencia en nuestro sitio web.
+            <br><br>
+            Enlaces a sitios web de terceros: Nuestro sitio web puede contener enlaces a sitios web de terceros que tienen sus propias políticas de privacidad. No somos responsables de las prácticas de privacidad de estos sitios web y te recomendamos revisar sus políticas antes de proporcionarles cualquier información personal.
+        </p>
+    </div>
+    <!--Axios-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
+    <!--JS Local Files-->
+    <script src="/src/js/mockup.js"></script>
     <script src="/src/js/index.js"></script>
     <script src="/src/js/letters.js"></script>
     <script src="/src/js/workC.js"></script>
     <script src="/src/js/form.js"></script>
+    <script src="/src/js/chat.js"></script>
+    <script src="/src/js/terms.js"></script>
 </body>
 </html>

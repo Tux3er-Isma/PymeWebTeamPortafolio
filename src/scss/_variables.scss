@@ -1,0 +1,17 @@
+/*Variables*/
+/*Color Variables*/
+$black: #000;
+$white: #fff;
+$light-dark: #201f1f;
+$dark-red: #540000;
+$light-red: #ff4040;
+$light-pink: #f1919e;
+$light-blue: #43bfee;
+$light-green: #88c063;
+
+/*Font Variables*/
+$poppins: "Poppins", sans-serif;
+@font-face {
+    font-family: "mono";
+    src: url(/public/assets/fonts/VictorMono-Regular.ttf);
+}

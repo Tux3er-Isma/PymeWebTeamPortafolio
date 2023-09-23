@@ -1,0 +1,76 @@
+/*SCSS Files*/
+@use 'variables';
+
+/*Terms Page Style*/
+.terms{
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-bottom: 50px;
+    background-color: #0e0e0e;
+    color: variables.$white;
+
+    &__close{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 50px;
+        top: 50px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__title{
+        margin-top: 30px;
+        margin-bottom: 40px;
+        width: 90%;
+        font-weight: bold;
+        display: flex;
+        align-items: flex-end;
+        // border-bottom: 2px solid variables.$white;
+        // align-self: flex-start;
+        // margin-left: 60px;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 2px;
+            background-color: variables.$white;
+        }
+    }
+
+    // &__line{
+    //     width: 30%;
+    //     margin-left: 60px;
+    //     height: 2px;
+    //     background-color: variables.$white;
+    //     margin-bottom: 20px;
+    //     align-self: flex-start;
+    // }
+
+    &__txt{
+        display: flex;
+        justify-content: center;
+        width:90%;
+        height: 100%;
+        font-weight: 100;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .terms{
+
+
+        &__title{
+
+            &::after{
+                width: 200px;
+            }
+        }
+    }
+}
