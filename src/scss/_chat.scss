@@ -371,11 +371,13 @@
         }
 
         &__main{
+            width: 105vw;
+            height: 110vh;
             position: fixed;
 
             &__title{
                 margin-top: 100px;
-                width: 350px;
+                width: 300px;
             }
 
             &__chat-container{
@@ -396,7 +398,7 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                bottom: 130px;
+                bottom: 230px;
                 z-index: 0;
 
                 &__items{
@@ -407,6 +409,7 @@
                         &::after{
                             align-self: center;
                             content: '';
+                            display: none;
                             position: absolute;
                             background-color: #fff;
                             width: 300px;
@@ -419,7 +422,8 @@
             }
 
             &__inpt-container{
-                bottom: 60px;
+                width: 320px;
+                bottom: 140px;
                 justify-content: center;
 
                 &__inpt{
