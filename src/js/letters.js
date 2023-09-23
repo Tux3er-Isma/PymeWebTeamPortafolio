@@ -18,7 +18,6 @@ let frasesArr = [
   "<Diseños/> creativos",
   "<Estrategia/> vendedora",
   "</Soporte> contínuo",
-  ">Competitivo precio",
   "</Visibilidad> online",
 ];
 
@@ -39,7 +38,8 @@ function cambiarFrase() {
     `
 
     document.head.appendChild(istyles);
-  let frase = frasesArr[Math.floor(Math.random()*frasesArr.length)];
+  // let frase = frasesArr[Math.floor(Math.random()*frasesArr.length)];
+  let frase = frasesArr[3]
   totalFraseArr.push(frase);
   for (let i = 0; i < totalFraseArr.length; i++){
     if (totalFraseArr.length == 1){
@@ -63,9 +63,7 @@ function cambiarFrase() {
     icon = '<i class="fa-solid fa-gear"></i>';
   } else if (frase == "</Soporte> contínuo"){
     icon = '<i class="fa-solid fa-gear"></i>';
-  } else if (frase == ">Competitivo precio"){
-    icon = '<i class="fa-solid fa-arrow-trend-up"></i>';
-  } else if (frase == "</Visibilidad> online"){
+  }  else if (frase == "</Visibilidad> online"){
     icon = '<i class="fa-solid fa-code-merge"></i>'
   }
   fraseArr.push(icon);
