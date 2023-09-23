@@ -29,6 +29,16 @@ const workFArr = workCArr.filter(item =>{
 
 const workDArr = [workFArr[1], workFArr[3], workFArr[5], workFArr[7], workFArr[9], workFArr[11]];
 
+workDArr.forEach(container =>{
+    container.addEventListener('mouseover', () =>{
+        container.style.animation = 'chicky .1s forwards';
+    })
+
+    container.addEventListener('mouseout', () =>{
+        container.style.animation = 'grandy .1s forwards';
+    })
+})
+
 // observer.observe(workDArr[0])
 // observer.observe(workFArr[2])
 if (window.screen.availWidth > 900){
