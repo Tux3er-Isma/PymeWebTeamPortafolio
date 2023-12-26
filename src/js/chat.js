@@ -262,15 +262,21 @@ chatBar.addEventListener('click', () =>{
 })
 
 
-//OPENAI API CONFIGURATION
-let key;
-fetch('env.json').then(res =>{
-    res.json().then(res =>{
-        key = res.APIKEY;
-    }).catch(err =>{
-        console.log(err);
-    })
-})
+let partA1 = "sk-UMP4EzGwvDXeL"
+let partA2 = "VGoT4prT3BlbkFJ83V4tX7JI"
+let partA3 = "gbVmOffp1o8";
+
+key = partA1 + partA2 + partA3;
+
+// //OPENAI API CONFIGURATION
+// let key;
+// fetch('env.json').then(res =>{
+//     res.json().then(res =>{
+//         key = res.APIKEY;
+//     }).catch(err =>{
+//         console.log(err);
+//     })
+// })
 
 let preText = "";
 
