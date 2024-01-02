@@ -262,7 +262,6 @@ chatBar.addEventListener('click', () =>{
 })
 
 
-//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
 let partA1 = "sk-nfeLZXfB8EzTGMrc5DEkT3B"
 let partA2 = "lbkFJ8BraYh6g4Uq7xw"
 let partA3 = "Mcg1Bg";
